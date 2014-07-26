@@ -1,8 +1,17 @@
+/*
+ * Copyright (c) 2014. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
+ */
+
 buildscript {
     repositories {
-        maven { url "http://repo.spring.io/libs-release" }
-        mavenLocal()
-        mavenCentral()
+//        maven { url "http://repo.spring.io/libs-release" }
+//        mavenLocal()
+//        mavenCentral()
+        maven { url "http://localhost:8081/artifactory/remote-repos" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE")
@@ -20,9 +29,10 @@ jar {
 }
 
 repositories {
-    mavenLocal()
-    mavenCentral()
-    maven { url "http://repo.spring.io/libs-release" }
+//    mavenLocal()
+//    mavenCentral()
+//    maven { url "http://repo.spring.io/libs-release" }
+    maven { url "http://localhost:8081/artifactory/remote-repos" }
 }
 
 dependencies {
